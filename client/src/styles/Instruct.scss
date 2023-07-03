@@ -1,0 +1,63 @@
+.instruct {
+  padding-top: 3rem;
+  padding-bottom: 0.5rem;
+  .instruct_container {
+    .instruct_title {
+      font-weight: var(--fw-900);
+      font-size: var(--fs-xxxl);
+      line-height: 1.1;
+      text-align: center;
+      //   text-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+      padding: 0.5rem 0;
+    }
+    .instruct_content {
+      padding: 2rem 5rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, 350px);
+      grid-gap: 3rem;
+      justify-content: center;
+      .instruct_card {
+        border-radius: 20px;
+        padding: 2rem;
+        background-color: var(--color-bg-gray);
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+          rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        .steps {
+          padding: 0.5rem 1rem;
+          border-radius: 10px;
+          background-color: var(--color-pri-light);
+          margin: 0.5rem 0;
+          color: var(--color-pri);
+          font-weight: var(--fw-700);
+          text-transform: uppercase;
+        }
+        .instruct_text {
+          font-weight: var(--fw-700);
+          margin-top: 0.5rem;
+          margin-bottom: 2rem;
+          padding: 0 0.25rem;
+        }
+        .instruct_image {
+          width: 100%;
+          height: 300px;
+          object-fit: contain;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 960px) {
+  .instruct {
+    padding: 1rem 0;
+    .instruct_container {
+      .instruct_title {
+        font-size: var(--fs-xxl);
+      }
+    }
+  }
+}

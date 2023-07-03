@@ -1,0 +1,30 @@
+.settings {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  margin-top: 0.75rem;
+  margin-right: 0.5rem;
+  background-color: var(--color-light);
+  width: 200px;
+  border-radius: 5px;
+  z-index: 99999;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  padding: 0.5rem;
+  .settings_content {
+    .list_settings {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      .link_setting {
+        font-weight: var(--fw-700);
+        cursor: pointer;
+        padding: 0.75rem;
+        transition: 0.3s ease-in-out;
+        border-radius: 5px;
+        &:hover {
+          background-color: var(--color-bg);
+        }
+      }
+    }
+  }
+}

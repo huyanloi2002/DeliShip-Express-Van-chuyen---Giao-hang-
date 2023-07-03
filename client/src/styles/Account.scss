@@ -1,0 +1,329 @@
+.account {
+  width: 100%;
+  padding: 0 1rem;
+  height: 100%;
+  .account_container {
+    border-radius: 20px;
+    background-color: var(--color-light);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    border: 1px solid rgb(226, 235, 242);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: 1.5rem;
+    padding-bottom: 0.75rem;
+    .warning_account {
+      display: flex;
+      align-items: center;
+      padding: 0 1.5rem;
+      gap: 0.35rem;
+      p {
+        font-size: var(--fs-10);
+        font-style: italic;
+      }
+    }
+    .account_content {
+      display: flex;
+      .account_content_left {
+        width: 50%;
+        padding: 0.25rem 2.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        .title_account {
+          font-weight: var(--fw-700);
+          text-transform: uppercase;
+          padding-bottom: 1rem;
+        }
+        .account_security {
+          width: 120px;
+          border-top-left-radius: 50%;
+          border-bottom-left-radius: 50%;
+          border-radius: 50%;
+          border-left-color: var(--color-gray);
+          border: 15px solid var(--color-pri);
+          aspect-ratio: 1/1;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          .text_security {
+            text-transform: uppercase;
+            font-weight: var(--fw-500);
+            font-size: var(--fs-md);
+          }
+        }
+        .note_security {
+          padding-top: 1rem;
+          .note {
+            display: flex;
+            gap: 0.5rem;
+            align-items: flex-start;
+            margin: 0.5rem 0;
+            i {
+              font-size: var(--fs-xl);
+            }
+            p {
+              font-size: var(--fs-12);
+              font-weight: var(--fw-700);
+              a {
+                font-size: var(--fs-12);
+                color: var(--color-pri);
+                cursor: pointer;
+                text-transform: uppercase;
+                text-decoration: underline;
+                margin: 0 0.25rem;
+              }
+            }
+          }
+        }
+      }
+      .account_content_right {
+        border-left: 1px solid rgb(226, 235, 242);
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.75rem;
+        padding: 0.25rem;
+        .title_account {
+          font-weight: var(--fw-700);
+          text-transform: uppercase;
+          padding-bottom: 1rem;
+        }
+        .image_account {
+          .avatar {
+            width: 100px;
+            aspect-ratio: 1/1;
+            border-radius: 10px;
+            background-color: var(--color-green);
+            object-fit: cover;
+          }
+        }
+        .account_info {
+          padding-top: 0.5rem;
+          width: 100%;
+          table {
+            display: flex;
+            justify-content: center;
+            tr {
+              th {
+                text-transform: uppercase;
+                font-size: var(--fs-10);
+                padding-right: 0.25rem;
+                font-weight: var(--fw-700);
+              }
+              td {
+                font-size: var(--fs-12);
+                font-weight: var(--fw-700);
+                color: var(--color-dark);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+// @media only screen and (max-width: 1580px) {
+//   .account {
+//     width: 100%;
+//     padding-left: 1rem;
+//     height: 100%;
+//     .account_container {
+//       border-radius: 20px;
+//       background-color: var(--color-light);
+//       box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+//       border: 1px solid rgb(226, 235, 242);
+//       height: 100%;
+//       display: flex;
+//       flex-direction: column;
+//       justify-content: space-between;
+//       padding-top: 1.5rem;
+//       padding-bottom: 0.75rem;
+//       .warning_account {
+//         display: flex;
+//         align-items: center;
+//         padding: 0 1.5rem;
+//         gap: 0.35rem;
+//         p {
+//           font-size: var(--fs-10);
+//           font-style: italic;
+//         }
+//       }
+//       .account_content {
+//         display: flex;
+//         .account_content_left {
+//           width: 50%;
+//           padding: 0.25rem 2.5rem;
+//           display: flex;
+//           flex-direction: column;
+//           justify-content: flex-start;
+//           align-items: center;
+//           .title_account {
+//             font-weight: var(--fw-700);
+//             text-transform: uppercase;
+//             padding-bottom: 1rem;
+//           }
+//           .account_security {
+//             width: 120px;
+//             border-top-left-radius: 50%;
+//             border-bottom-left-radius: 50%;
+//             border-radius: 50%;
+//             border-left-color: var(--color-gray);
+//             border: 15px solid var(--color-pri);
+//             aspect-ratio: 1/1;
+//             display: flex;
+//             justify-content: center;
+//             align-items: center;
+//             .text_security {
+//               text-transform: uppercase;
+//               font-weight: var(--fw-500);
+//               font-size: var(--fs-md);
+//             }
+//           }
+//           .note_security {
+//             padding-top: 1rem;
+//             .note {
+//               display: flex;
+//               gap: 0.5rem;
+//               align-items: flex-start;
+//               margin: 0.5rem 0;
+//               i {
+//                 font-size: var(--fs-xl);
+//               }
+//               p {
+//                 font-size: var(--fs-12);
+//                 font-weight: var(--fw-700);
+//                 a {
+//                   font-size: var(--fs-12);
+//                   color: var(--color-pri);
+//                   cursor: pointer;
+//                   text-transform: uppercase;
+//                   text-decoration: underline;
+//                   margin: 0 0.25rem;
+//                 }
+//               }
+//             }
+//           }
+//         }
+//         .account_content_right {
+//           border-left: 1px solid rgb(226, 235, 242);
+//           width: 50%;
+//           display: flex;
+//           flex-direction: column;
+//           align-items: center;
+//           gap: 0.75rem;
+//           padding: 0.25rem;
+//           .title_account {
+//             font-weight: var(--fw-700);
+//             text-transform: uppercase;
+//             padding-bottom: 1rem;
+//           }
+//           .image_account {
+//             .avatar {
+//               width: 100px;
+//               border-radius: 10px;
+//               background-color: var(--color-green);
+//             }
+//           }
+//           .account_info {
+//             padding-top: 1.15rem;
+//             table {
+//               tr {
+//                 th {
+//                   text-transform: uppercase;
+//                   font-size: var(--fs-10);
+//                   padding-right: 0.75rem;
+//                   font-weight: var(--fw-700);
+//                 }
+//                 td {
+//                   font-size: var(--fs-12);
+//                   font-weight: var(--fw-700);
+//                   color: var(--color-green);
+//                   font-style: italic;
+//                 }
+//               }
+//             }
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
+
+@media only screen and (max-width: 1580px) {
+  .account {
+    .account_container {
+      .warning_account {
+        display: flex;
+        align-items: center;
+        padding: 0 1rem;
+        gap: 0.35rem;
+        p {
+          font-size: var(--fs-10);
+          font-style: italic;
+        }
+      }
+      .account_content {
+        .account_content_left {
+          padding: 0.25rem 2rem;
+          .title_account {
+            padding-bottom: 0.5rem;
+            font-size: var(--fs-md);
+          }
+          .account_security {
+            width: 80px;
+            border: 10px solid var(--color-pri);
+            .text_security {
+              font-size: var(--fs-12);
+            }
+          }
+          .note_security {
+            .note {
+              i {
+                font-size: var(--fs-sm);
+              }
+              p {
+                font-size: var(--fs-10);
+                a {
+                  font-size: var(--fs-10);
+                }
+              }
+            }
+          }
+        }
+        .account_content_right {
+          padding: 0.25rem;
+          .title_account {
+            font-size: var(--fs-md);
+            padding-bottom: 0.25rem;
+          }
+          .image_account {
+            .avatar {
+              width: 60px;
+            }
+          }
+          .account_info {
+            table {
+              tr {
+                th {
+                  font-size: var(--fs-10);
+                }
+                td {
+                  font-size: var(--fs-10);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 1100px) {
+  .account {
+    padding-top: 1rem;
+  }
+}

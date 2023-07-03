@@ -1,0 +1,161 @@
+.register_container {
+  font-size: var(--fs-sm);
+  background-color: var(--color-pri);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .register_content {
+    height: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    .register {
+      height: 100%;
+      display: flex;
+      border-radius: 20px;
+      background-color: var(--color-light);
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+        rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+      .content_left {
+        padding: 0.5rem;
+        height: 100%;
+        .box_left {
+          background-color: var(--color-pri);
+          height: 100%;
+          border-radius: 15px;
+          padding: 2rem;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          .logo_mini {
+            img {
+              border-radius: 10px;
+              padding: 0.25rem;
+              background-color: var(--color-light);
+            }
+          }
+          .slogan {
+            padding: 0.5rem;
+            color: var(--color-light);
+            text-align: center;
+            font-weight: var(--fw-700);
+            text-transform: uppercase;
+            font-size: var(--fs-lg);
+            font-style: italic;
+          }
+        }
+      }
+      .content_right {
+        padding: 3rem;
+        height: 100%;
+        .box_right {
+          height: 100%;
+          padding: 0.5rem;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          .top {
+            .title_register {
+              display: flex;
+              align-items: center;
+              span {
+                font-weight: var(--fw-700);
+                font-size: var(--fs-xxl);
+                margin: 0.25rem 0;
+              }
+            }
+            .change_link {
+              margin: 0.25rem 0;
+              font-weight: var(--fw-500);
+              letter-spacing: 0.1px;
+            }
+          }
+          .bottom {
+            padding: 2rem 0;
+            .form_register {
+              .form-group {
+                padding: 0.5rem 0;
+                label {
+                  color: var(--color-gray);
+                  font-weight: var(--fw-700);
+                  margin: 0.25rem 0;
+                }
+                .input_content {
+                  input,
+                  input:focus {
+                    margin: 0.25rem 0;
+                    height: 45px;
+                    font-size: var(--fs-sm);
+                    font-weight: var(--fw-700);
+                    background-color: var(--color-light);
+                    border: 2px solid var(--color-bg);
+                    border-radius: 5px;
+                    letter-spacing: 0.2px;
+                    padding-right: 1.5rem;
+                    &.border_error {
+                      border: 2px solid red;
+                      transition: 0.5s all ease;
+                    }
+                  }
+                }
+              }
+              .btn_register {
+                background-color: var(--color-pri);
+                font-weight: var(--fw-700);
+                font-size: var(--fs-sm);
+                color: var(--color-light);
+                padding: 0.5rem 1.5rem;
+                margin-top: 1rem;
+                border: 2px solid transparent;
+                transition: 0.5s all ease;
+                border-radius: 10px;
+              }
+              .btn_register:hover {
+                border: 2px solid var(--color-pri);
+                background-color: var(--color-light);
+                color: var(--color-pri);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 1400px) {
+  .register_container {
+    .register_content {
+      padding: 0 1rem;
+      .register {
+        width: 90%;
+        .content_left {
+          width: 50%;
+        }
+        .content_right {
+          width: 50% !important;
+          padding: 2rem;
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 665px) {
+  .register_container {
+    .register_content {
+      padding: 0 1rem;
+      .register {
+        width: 100%;
+        .content_left {
+          display: none;
+        }
+        .content_right {
+          width: 100% !important;
+          padding: 2rem;
+        }
+      }
+    }
+  }
+}

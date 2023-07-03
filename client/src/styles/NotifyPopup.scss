@@ -1,0 +1,88 @@
+.notify_popup {
+  .notify_popup_content {
+    .content_body {
+      .notify_card {
+        padding: 0.5rem 1rem;
+        background-color: var(--color-bg);
+        display: flex;
+        gap: 1rem;
+        cursor: pointer;
+        align-items: center;
+        border-radius: 10px;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px,
+          rgba(0, 0, 0, 0.23) 0px 3px 6px;
+        z-index: 999;
+        .avatar {
+          .img_noti {
+            width: 50px;
+            aspect-ratio: 1/1;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 2px solid var(--color-pri);
+            background-color: var(--color-light);
+          }
+        }
+        .content_text {
+          display: flex;
+          gap: 1rem;
+          align-items: center;
+          width: 100%;
+          position: relative;
+          .text_noti {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 0.15rem;
+            .email_noti {
+              font-weight: var(--fw-700);
+              font-size: var(--fs-12);
+            }
+            .span_noti {
+              font-weight: var(--fw-700);
+              font-size: var(--fs-md);
+              text-transform: uppercase;
+            }
+            .desc_noti {
+              font-weight: var(--fw-500);
+              font-size: var(--fs-10);
+              text-transform: uppercase;
+            }
+            .time_noti {
+              font-weight: var(--fw-700);
+              font-size: var(--fs-12);
+              color: gray;
+            }
+          }
+          .close_noti {
+            position: absolute;
+            right: 0;
+            top: 0;
+            border: none;
+            background-color: transparent;
+          }
+          .is_read {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            i {
+              border: 2px solid var(--color-light);
+              border-radius: 50%;
+              color: var(--color-pri);
+              text-align: left;
+            }
+          }
+          .is_not_read {
+            position: absolute;
+            right: 0;
+            i {
+              border: 2px solid var(--color-light);
+              border-radius: 50%;
+              color: var(--color-dark);
+              text-align: left;
+            }
+          }
+        }
+      }
+    }
+  }
+}

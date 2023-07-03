@@ -1,0 +1,509 @@
+.parcels_content {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  .parcels_options {
+    .parcels_title {
+      font-weight: var(--fw-700);
+    }
+  }
+  .parcels_list {
+    height: 450px;
+    overflow: scroll;
+    padding-left: 0.25rem;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    .parcels_card {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      padding: 1rem;
+      border-top-left-radius: 20px;
+      border-bottom-left-radius: 20px;
+      margin-left: 0.25rem;
+      margin: 0.75rem 0;
+      cursor: pointer;
+      transition: 0.3s ease-in-out;
+      position: relative;
+      &.active {
+        background-color: var(--color-light);
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+      }
+      &.parcels_card > * {
+        flex: 1;
+      }
+      .parcels_trans {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        .img_parcels_trans {
+          width: 60px;
+          background-color: var(--color-pri);
+          padding: 0.5rem;
+          border-radius: 10px;
+        }
+        .name_parcels_trans {
+          font-weight: var(--fw-700);
+          text-transform: uppercase;
+          font-size: var(--fs-12);
+        }
+      }
+      .parcels_address {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        .sender_address,
+        .receiver_address {
+          font-weight: var(--fw-500);
+          font-size: var(--fs-sm);
+        }
+      }
+      .tracking_number {
+        font-size: var(--fs-sm);
+        font-weight: var(--fw-500);
+        text-transform: uppercase;
+        display: flex;
+        justify-content: center;
+      }
+      .date_start {
+        font-size: var(--fs-sm);
+        font-weight: var(--fw-500);
+        display: flex;
+        justify-content: center;
+      }
+      .parcels_status {
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        gap: 0.5rem;
+        font-weight: var(--fw-500);
+        i {
+          font-size: var(--fs-sm);
+          color: var(--color-green);
+        }
+        .status_name {
+          font-size: var(--fs-sm);
+        }
+      }
+      .parcels_price {
+        display: flex;
+        gap: 0.5rem;
+        align-items: center;
+        span {
+          font-size: var(--fs-md);
+          font-weight: var(--fw-700);
+        }
+        i {
+          .thumb_price {
+            position: absolute;
+            right: 10%;
+            top: 70%;
+            display: none;
+            pointer-events: none;
+            z-index: 9999;
+            padding: 0.5rem;
+            margin: 0 0.5rem;
+            border-radius: 5px;
+            background-color: var(--color-greenlight);
+            p {
+              font-size: var(--fs-10);
+              font-weight: var(--fw-500);
+              b {
+                font-size: var(--fs-10);
+              }
+              &:last-child {
+                text-transform: uppercase;
+                font-size: var(--fs-12);
+                font-weight: var(--fw-700);
+                b {
+                  font-size: var(--fs-12);
+                }
+              }
+            }
+          }
+          &:hover {
+            .thumb_price {
+              display: flex;
+              flex-direction: column;
+              gap: 0.5rem;
+            }
+          }
+        }
+      }
+      .parcel_reviews {
+        width: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        background-color: var(--color-pri);
+        color: white;
+        font-weight: var(--fw-700);
+        border-radius: 10px;
+        padding: 0.25rem 0;
+        outline: none;
+        border: none;
+      }
+      .modal_reviews {
+        .modal-dialog {
+          .close_reviews {
+            display: flex;
+            justify-content: flex-end;
+            .fa-xmark {
+              color: crimson;
+            }
+          }
+          .content_reviews {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            justify-content: center;
+            align-items: center;
+
+            .title_reviews {
+              h4 {
+                text-transform: uppercase;
+                font-weight: var(--fw-700);
+              }
+            }
+            .star_reviews {
+              display: flex;
+              gap: 0.25rem;
+              justify-content: center;
+              .fa-star {
+                font-size: var(--fs-xxl);
+                &.green {
+                  color: var(--color-green);
+                }
+                &.greenlight {
+                  color: var(--color-greenlight);
+                }
+              }
+            }
+            .status_reviews {
+              display: flex;
+              gap: 0.5rem;
+              .box_status {
+                padding: 0.5rem;
+                border-radius: 10px;
+                background-color: var(--color-greenlight);
+                font-weight: var(--fw-700);
+                transition: 0.3s ease-in-out;
+                &.active {
+                  padding: 0.5rem;
+                  border-radius: 10px;
+                  background-color: var(--color-green);
+                  font-weight: var(--fw-700);
+                }
+                &:hover {
+                  background-color: var(--color-green);
+                }
+              }
+            }
+            .comment_reviews {
+              #commentReviews {
+                border: 1px solid gray;
+                border-radius: 10px;
+                padding: 0.5rem;
+              }
+            }
+            .btn_save_reviewes {
+              padding: 0.5rem;
+              background-color: var(--color-green);
+              border: none;
+              outline: none;
+              border-radius: 5px;
+              font-weight: var(--fw-700);
+              margin-bottom: 1rem;
+            }
+          }
+        }
+      }
+      .parcel_reviews_not {
+        width: 20px;
+        background-color: transparent;
+        outline: none;
+        border: none;
+      }
+      .parcel_is_reviews {
+        width: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        background-color: var(--color-green);
+        color: white;
+        font-weight: var(--fw-700);
+        border-radius: 10px;
+        padding: 0.25rem 0;
+        outline: none;
+        border: none;
+      }
+    }
+  }
+}
+.parcel_details {
+  padding-top: 1rem;
+  z-index: -9999;
+  .parcels_details_box {
+    height: 100%;
+    border-radius: 10px;
+    background-color: var(--color-light);
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    padding: 1rem;
+    height: 100%;
+    .content_top_details {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .trans_details {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        .img_trans_details {
+          padding: 0.5rem;
+          border-radius: 10px;
+          background-color: var(--color-pri);
+        }
+        .text_trans_details {
+          text-transform: uppercase;
+          .name_trans_details {
+            font-weight: var(--fw-700);
+          }
+          .track_number_details {
+            font-weight: var(--fw-500);
+          }
+        }
+      }
+      .date_details {
+        .date_start,
+        .date_expected {
+          font-weight: var(--fw-700);
+          span {
+            font-size: var(--fs-sm);
+            font-weight: var(--fw-300);
+          }
+        }
+      }
+    }
+    .content_bottom_details {
+      padding: 0.5rem;
+      padding-top: 1rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      gap: 0.25rem;
+      .address_details {
+        width: 60%;
+        height: 400px;
+      }
+      .right_details {
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 400px;
+        padding: 0.5rem;
+        .info_address_details {
+          display: flex;
+          padding: 0.5rem;
+          align-items: center;
+          gap: 0.5rem;
+          height: 150px;
+          .circle_adrress {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            height: 100%;
+            .circle_sender {
+              color: var(--color-green);
+              font-size: var(--fs-10);
+            }
+            .circle_receiver {
+              color: var(--color-pri);
+              font-size: var(--fs-10);
+            }
+          }
+          .sender_receiver {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 0.15rem;
+            .sender {
+              .title_sender {
+                font-size: var(--fs-10);
+                text-transform: uppercase;
+                font-weight: var(--fw-700);
+                color: var(--color-green);
+              }
+            }
+            .receiver {
+              .title_receiver {
+                font-size: var(--fs-10);
+                text-transform: uppercase;
+                font-weight: var(--fw-700);
+                color: var(--color-pri);
+              }
+            }
+            .receiver,
+            .sender {
+              .name {
+                font-size: var(--fs-md);
+                font-weight: var(--fw-700);
+              }
+              .address {
+                font-size: var(--fs-12);
+                font-weight: var(--fw-500);
+              }
+            }
+          }
+        }
+        .status_details {
+          padding: 0.5rem;
+          padding-top: 1rem;
+          padding-left: 2rem;
+
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          gap: 1rem;
+
+          .status_card {
+            display: flex;
+            gap: 0.5rem;
+            .content_icon_status {
+              display: flex;
+              align-items: center;
+              i {
+                font-size: var(--fs-10);
+                color: var(--color-gray);
+              }
+            }
+            .content_text_status {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              width: 100%;
+              .name_status {
+                width: 70%;
+                font-weight: var(--fw-500);
+                color: var(--color-gray);
+                font-size: var(--fs-12);
+              }
+              .address_status {
+                width: 30%;
+                font-size: var(--fs-10);
+              }
+            }
+            &.active {
+              .content_icon_status {
+                i {
+                  font-size: var(--fs-14);
+                  color: var(--color-green);
+                }
+              }
+              .content_text_status {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                .name_status {
+                  width: 70%;
+                  font-weight: var(--fw-700);
+                  color: var(--color-green);
+                  font-size: var(--fs-16);
+                }
+                .address_status {
+                  width: 30%;
+                  font-size: var(--fs-10);
+                  font-weight: var(--fw-700);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1580px) {
+  .parcels_content {
+    .parcels_list {
+      height: 450px;
+      overflow: scroll;
+      padding: 0.15rem;
+      &::-webkit-scrollbar {
+        display: none;
+      }
+      .parcels_card {
+        border-radius: 20px;
+        margin: 0.25rem;
+        .parcels_trans {
+          .name_parcels_trans {
+            font-size: var(--fs-10);
+          }
+        }
+        .parcels_address {
+          display: none;
+        }
+
+        .date_start {
+          font-size: var(--fs-12);
+          font-weight: var(--fw-500);
+        }
+        .parcels_price {
+          span {
+            font-size: var(--fs-14);
+            font-weight: var(--fw-700);
+          }
+        }
+      }
+    }
+  }
+  .parcel_details {
+    .parcels_details_box {
+      .content_top_details {
+        .trans_details {
+          gap: 0.25rem;
+          .img_trans_details {
+            padding: 0.25rem;
+          }
+          .text_trans_details {
+            text-transform: uppercase;
+            .name_trans_details {
+              font-weight: var(--fw-700);
+              font-size: var(--fs-md);
+            }
+            .track_number_details {
+              font-weight: var(--fw-500);
+              font-size: var(--fs-12);
+            }
+          }
+        }
+        .date_details {
+          .date_start,
+          .date_expected {
+            font-size: var(--fs-10);
+            span {
+              font-size: var(--fs-10);
+            }
+          }
+        }
+      }
+      .content_bottom_details {
+        display: flex;
+        flex-direction: column;
+        .address_details {
+          width: 100%;
+        }
+        .right_details {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,103 @@
+.notify {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  margin-top: 0.75rem;
+  margin-right: 0.5rem;
+  background-color: var(--color-light);
+  width: 350px;
+  border-radius: 5px;
+  z-index: 99999;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+  .notify_content {
+    padding: 0.5rem;
+    max-height: 500px;
+    overflow: scroll;
+    .title_noti {
+      margin-bottom: 1rem;
+      h5 {
+        font-weight: var(--fw-700);
+      }
+      .sound_noti {
+        i {
+          cursor: pointer;
+          font-size: var(--fs-lg);
+        }
+      }
+    }
+    .notify_card {
+      padding: 0.5rem;
+      background-color: var(--color-bg);
+      border-radius: 10px;
+      display: flex;
+      gap: 1rem;
+      cursor: pointer;
+      align-items: center;
+      margin-top: 0.5rem;
+
+      .avatar {
+        .img_noti {
+          width: 50px;
+          aspect-ratio: 1/1;
+          object-fit: cover;
+          border-radius: 50%;
+          border: 2px solid var(--color-pri);
+          background-color: var(--color-light);
+        }
+      }
+      .content_text {
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+        width: 100%;
+        position: relative;
+        .text_noti {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 0.15rem;
+          .email_noti {
+            font-weight: var(--fw-700);
+            font-size: var(--fs-12);
+          }
+          .span_noti {
+            font-weight: var(--fw-700);
+            font-size: var(--fs-md);
+            text-transform: uppercase;
+          }
+          .desc_noti {
+            font-weight: var(--fw-500);
+            font-size: var(--fs-10);
+            text-transform: uppercase;
+          }
+          .time_noti {
+            font-weight: var(--fw-700);
+            font-size: var(--fs-12);
+            color: gray;
+          }
+        }
+        .is_read {
+          position: absolute;
+          right: 0;
+          i {
+            border: 2px solid var(--color-light);
+            border-radius: 50%;
+            color: var(--color-pri);
+            text-align: left;
+          }
+        }
+        .is_not_read {
+          position: absolute;
+          right: 0;
+          i {
+            border: 2px solid var(--color-light);
+            border-radius: 50%;
+            color: var(--color-dark);
+            text-align: left;
+          }
+        }
+      }
+    }
+  }
+}
